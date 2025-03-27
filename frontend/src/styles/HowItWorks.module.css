@@ -1,0 +1,297 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--dark-black);
+  }
+  
+  .heroSection {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(46, 204, 113, 0.1));
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .heroTitle {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .highlight {
+    color: var(--primary-blue);
+    font-weight: bold;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.5rem;
+    color: var(--dark-black);
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .droneAnimation {
+    font-size: 8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.1;
+    z-index: 1;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+    50% { transform: translate(-50%, -60%) rotate(5deg); }
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--dark-black);
+    position: relative;
+  }
+  
+  .sectionTitle::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-blue), var(--light-green));
+    margin: 1rem auto 0;
+    border-radius: 2px;
+  }
+  
+  .featuresSection {
+    margin-bottom: 5rem;
+  }
+  
+  .featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .featureCard {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    text-align: center;
+    border: 1px solid rgba(52, 152, 219, 0.1);
+  }
+  
+  .featureCard:hover {
+    transform: translateY(-10px);
+  }
+  
+  .featureIcon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+  
+  .featureCard h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-blue);
+  }
+  
+  .featureCard p {
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .stepsSection {
+    margin-bottom: 5rem;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-blue), var(--light-green));
+    border-radius: 2px;
+  }
+  
+  .timelineItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .timelineItem:nth-child(odd) {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+  
+  .timelineNumber {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--light-green));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+  
+  .timelineContent {
+    width: calc(50% - 50px);
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+  }
+  
+  .timelineContent h3 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+  }
+  
+  .loyaltySection {
+    margin-bottom: 5rem;
+  }
+  
+  .loyaltyCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .loyaltyCard {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+  }
+  
+  .loyaltyHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .loyaltyIcon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: var(--light-green);
+  }
+  
+  .loyaltyCard h3 {
+    font-size: 1.5rem;
+    color: var(--dark-black);
+  }
+  
+  .loyaltyList {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .loyaltyList li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .loyaltyList li::before {
+    content: '✓';
+    color: var(--light-green);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+  
+  .ctaSection {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(46, 204, 113, 0.1));
+    border-radius: 16px;
+  }
+  
+  .ctaSection h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--dark-black);
+  }
+  
+  .ctaButton {
+    background: linear-gradient(to right, var(--primary-blue), var(--light-green));
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+  }
+  
+  .ctaButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(46, 204, 113, 0.4);
+  }
+  
+  .ctaIcon {
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .heroTitle {
+      font-size: 2.5rem;
+    }
+    
+    .heroSubtitle {
+      font-size: 1.2rem;
+    }
+    
+    .timeline::before {
+      left: 30px;
+    }
+    
+    .timelineItem,
+    .timelineItem:nth-child(odd) {
+      flex-direction: row;
+      text-align: left;
+    }
+    
+    .timelineContent {
+      width: calc(100% - 100px);
+      margin-left: auto;
+    }
+  }

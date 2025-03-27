@@ -1,0 +1,361 @@
+/* MyOrders.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  color: var(--dark-black);
+  margin-bottom: 0.5rem;
+}
+
+.highlight {
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.loyaltyBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(to right, #FFD700, #FFA500);
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(255, 165, 0, 0.3);
+}
+
+.weatherAlert {
+  background: linear-gradient(to right, #FF6B6B, #FF8E8E);
+  color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.01); }
+}
+
+.alertContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.alertIcon {
+  font-size: 2.5rem;
+}
+
+.weatherAlert h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+}
+
+.weatherAlert p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.loyaltyOffer {
+  margin-top: 0.5rem !important;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 0.6rem;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.alertButton {
+  background: white;
+  color: #FF6B6B;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.alertButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background: white;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.active {
+  background: linear-gradient(to right, var(--primary-blue), var(--light-green));
+  color: white;
+  box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem;
+}
+
+.droneLoading {
+  font-size: 4rem;
+  animation: float 2s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.loading p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.ordersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.orderCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(52, 152, 219, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.orderCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.delivered {
+  border-left: 4px solid var(--light-green);
+}
+
+.inProgress {
+  border-left: 4px solid var(--primary-blue);
+  animation: pulseBorder 2s infinite;
+}
+
+@keyframes pulseBorder {
+  0%, 100% { border-left-color: var(--primary-blue); }
+  50% { border-left-color: rgba(52, 152, 219, 0.5); }
+}
+
+.scheduled {
+  border-left: 4px solid #FFA500;
+}
+
+.cancelled {
+  border-left: 4px solid #FF6B6B;
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.orderId {
+  font-weight: bold;
+  color: var(--dark-black);
+}
+
+.orderStatus {
+  font-weight: 500;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+}
+
+.orderDetails {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.detailItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.detailLabel {
+  font-weight: 500;
+  color: #555;
+}
+
+.delayedText {
+  color: #FF6B6B;
+  font-weight: 500;
+}
+
+.orderFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.trackingLabel {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.trackButton {
+  background: transparent;
+  border: none;
+  color: var(--primary-blue);
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.3s ease;
+}
+
+.trackButton:hover {
+  color: var(--light-green);
+  transform: translateX(5px);
+}
+
+.buttonIcon {
+  font-size: 1.1rem;
+}
+
+.noOrders {
+  text-align: center;
+  grid-column: 1 / -1;
+  padding: 3rem;
+}
+
+.noOrdersIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.noOrders h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-black);
+}
+
+.noOrders p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.shopButton {
+  background: linear-gradient(to right, var(--primary-blue), var(--light-green));
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+}
+
+.shopButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .loyaltyBadge {
+    position: static;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+  
+  .weatherAlert {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .alertContent {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .alertButton {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  
+  .ordersGrid {
+    grid-template-columns: 1fr;
+  }
+}

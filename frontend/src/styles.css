@@ -1,0 +1,326 @@
+:root {
+    --primary-blue: #3498db;
+    --light-green: #2ecc71;
+    --dark-black: #2c3e50;
+    --light-gray: #ecf0f1;
+    --white: #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: var(--light-gray);
+  }
+  
+  .layout {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: var(--dark-black);
+    color: var(--white);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: var(--light-green);
+  }
+  
+  .nav-links {
+    list-style: none;
+    flex-grow: 1;
+  }
+  
+  .nav-links li {
+    margin-bottom: 15px;
+  }
+  
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: var(--light-green);
+  }
+  
+  .user-info {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .user-info p {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .logout-btn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: var(--white);
+  }
+  
+  /* Login Page */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--dark-black);
+  }
+  
+  .login-form {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+    color: var(--dark-black);
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dark-black);
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .error {
+    color: #e74c3c;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Dashboard */
+  .dashboard h1 {
+    color: var(--dark-black);
+    margin-bottom: 30px;
+  }
+  
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .stat-card {
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+  }
+  
+  /* User and Admin Pages */
+  .user-page, .admin-page {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .user-page h1, .admin-page h1 {
+    color: var(--dark-black);
+    margin-bottom: 20px;
+  }
+  
+  .user-content, .admin-content {
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .admin-content h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+  }
+  
+  .admin-content ul {
+    list-style-position: inside;
+    margin-left: 10px;
+  }
+  
+  .admin-content li {
+    margin-bottom: 10px;
+  }
+
+  /* Enhanced Button Styles */
+.nav-button {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .nav-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+  }
+  
+  .nav-button.active {
+    background: var(--light-green);
+    color: var(--dark-black);
+  }
+  
+  .button-icon {
+    margin-right: 12px;
+    font-size: 18px;
+  }
+  
+  .button-text {
+    font-size: 16px;
+  }
+  
+  .admin-button {
+    background: rgba(231, 76, 60, 0.2);
+  }
+  
+  .admin-button:hover {
+    background: rgba(231, 76, 60, 0.3);
+  }
+  
+  /* Logo Styles */
+  .logo {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .logo-icon {
+    font-size: 28px;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-size: 22px;
+    font-weight: bold;
+    background: linear-gradient(to right, var(--primary-blue), var(--light-green));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  /* User Info Styles */
+  .user-info {
+    margin-top: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .user-avatar {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .user-email {
+    font-size: 14px;
+    margin-bottom: 5px;
+    word-break: break-all;
+  }
+  
+  .user-role {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-bottom: 15px;
+  }
+  
+  /* Logout Button */
+  .logout-btn {
+    background: rgba(231, 76, 60, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background: rgba(231, 76, 60, 1);
+    transform: scale(1.02);
+  }
+  
+  .logout-icon {
+    margin-right: 8px;
+  }

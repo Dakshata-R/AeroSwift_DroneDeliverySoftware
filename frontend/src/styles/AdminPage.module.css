@@ -1,0 +1,292 @@
+.adminPage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--dark-black);
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .highlight {
+    color: var(--primary-blue);
+    font-weight: bold;
+  }
+  
+  .header p {
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+  }
+  
+  .tab {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .tab:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .active {
+    background: linear-gradient(to right, var(--primary-blue), var(--light-green));
+    color: white;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+  }
+  
+  .content {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+  }
+  
+  .section h2 {
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 3rem;
+  }
+  
+  .droneLoading {
+    font-size: 3rem;
+    animation: float 2s ease-in-out infinite;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .loading p {
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  .userTable {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .tableHeader, .userRow {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 0.5fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+  }
+  
+  .tableHeader {
+    font-weight: bold;
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 8px;
+  }
+  
+  .userRow {
+    border-bottom: 1px solid #eee;
+  }
+  
+  .userRow:last-child {
+    border-bottom: none;
+  }
+  
+  .roleSelect {
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background: white;
+  }
+  
+  .deleteBtn {
+    background: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .deleteBtn:hover {
+    background: #FF5252;
+    transform: translateY(-2px);
+  }
+  
+  .settingsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .settingCard {
+    background: rgba(52, 152, 219, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(52, 152, 219, 0.1);
+  }
+  
+  .settingCard h3 {
+    margin-bottom: 1.5rem;
+    color: var(--dark-black);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .settingItem {
+    margin-bottom: 1rem;
+  }
+  
+  .settingItem label {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #555;
+    font-size: 0.9rem;
+  }
+  
+  .settingItem input, 
+  .settingItem select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .saveBtn {
+    background: linear-gradient(to right, var(--primary-blue), var(--light-green));
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .saveBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+  }
+  
+  .analyticsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .metricCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+  }
+  
+  .metricCard h3 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .metricValue {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+  }
+  
+  .metricSubtext {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .chartPlaceholder {
+    height: 150px;
+    background: rgba(52, 152, 219, 0.05);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2rem;
+    }
+    
+    .tab {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .tableHeader, .userRow {
+      grid-template-columns: 1.5fr 1fr 1fr 0.5fr 1fr;
+      font-size: 0.9rem;
+      gap: 0.5rem;
+    }
+  }
+/* Add these new styles to your existing CSS file */
+
+.chartContainer {
+    height: 200px;
+    margin-top: 1rem;
+    position: relative;
+  }
+  
+  /* Chart tooltip styling */
+  .chart-tooltip {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive adjustments for charts */
+  @media (max-width: 768px) {
+    .chartContainer {
+      height: 180px;
+    }
+    
+    .analyticsGrid {
+      grid-template-columns: 1fr;
+    }
+  }

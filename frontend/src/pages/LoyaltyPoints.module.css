@@ -1,0 +1,310 @@
+/* Loyalty Points Page Specific Styles */
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.headerTitle {
+    color: var(--dark-black);
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, var(--primary-blue), var(--light-green));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.headerSubtitle {
+    color: var(--primary-blue);
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.highlight {
+    font-weight: bold;
+    color: var(--light-green);
+}
+
+.pointsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    .pointsContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pointsCard {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.glowEffect {
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(46, 204, 113, 0.3);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(46, 204, 113, 0.5);
+    }
+}
+
+.pointsValue {
+    margin-bottom: 1.5rem;
+}
+
+.pointsNumber {
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--light-green);
+    display: block;
+    line-height: 1;
+    text-shadow: 0 2px 5px rgba(46, 204, 113, 0.3);
+}
+
+.pointsLabel {
+    font-size: 1.3rem;
+    color: var(--dark-black);
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.progressContainer {
+    height: 14px;
+    background: #f0f0f0;
+    border-radius: 7px;
+    margin: 2rem 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.progressBar {
+    height: 100%;
+    background: linear-gradient(to right, var(--primary-blue), var(--light-green));
+    border-radius: 7px;
+    transition: width 0.5s ease;
+}
+
+.pointsTarget {
+    display: flex;
+    justify-content: space-between;
+    color: var(--dark-black);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.targetText {
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+.rewardTitle {
+    color: var(--dark-black);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.rewardCard {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    border: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.pulseAnimation {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.rewardIcon {
+    font-size: 3rem;
+    margin-right: 2rem;
+    color: var(--light-green);
+}
+
+.rewardContent h4 {
+    color: var(--dark-black);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.rewardContent p {
+    color: var(--primary-blue);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.rewardProgress {
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.rewardProgressBar {
+    height: 100%;
+    background: linear-gradient(to right, var(--primary-blue), var(--light-green));
+    border-radius: 4px;
+}
+
+.breakdownSection {
+    margin-bottom: 4rem;
+}
+
+.sectionTitle {
+    color: var(--dark-black);
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.titleIcon {
+    font-size: 1.8rem;
+}
+
+.breakdownGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.breakdownItem {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.hoverEffect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.breakdownIcon {
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+    color: var(--primary-blue);
+}
+
+.breakdownContent h4 {
+    color: var(--dark-black);
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.breakdownContent p {
+    color: #666;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.breakdownStats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--light-green);
+    font-size: 1rem;
+}
+
+.streakText {
+    color: var(--primary-blue);
+}
+
+.streakBadge {
+    margin-top: 0.8rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 165, 0, 0.1);
+    border-radius: 50px;
+    color: orange;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.ctaContainer {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.ctaButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(to right, var(--primary-blue), var(--light-green));
+    color: white;
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.ctaButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(46, 204, 113, 0.5);
+}
+
+.buttonIcon {
+    font-size: 1.4rem;
+}
+
+.ctaSubtext {
+    margin-top: 1rem;
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
